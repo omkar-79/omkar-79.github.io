@@ -1,4 +1,4 @@
-#about {
+.about {
   width: 90%;
   margin: 0 auto;
   max-width: 960px;
@@ -9,8 +9,8 @@
 
 .tech {
   margin: 10px;
-  flex: 1 1 30%; /* Allow flex items to grow and shrink, with a basis of 30% */
-  max-width: 30%; /* Ensure each tech section does not exceed 30% width */
+  flex: 1 1 30%;
+  max-width: 30%;
   text-align: center;
 }
 
@@ -21,10 +21,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+
   p {
     font-size: 16px;
     text-align: center;
   }
+
   @media only screen and (min-width: $cut) {
     flex-wrap: nowrap;
     font-size: 75px;
@@ -34,4 +36,13 @@
 .user-details {
   text-align: center;
   margin: 5px auto;
+} 
+
+/* New styles for img and i icons in .tech */
+.tech img, 
+.tech i {
+  width: 50px; /* Adjust the size of icons */
+  height: 50px;
+  vertical-align: middle;
+  margin: 0 5px;
 }
