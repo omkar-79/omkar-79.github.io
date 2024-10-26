@@ -38,10 +38,9 @@
   margin: 5px auto;
 }
 
-/* Updated styles for img and i icons in .tech */
-.tech img,
-.tech i {
-  width: 75px; /* Set the size to 75px */
+/* Style for .icon-image to match icon size */
+.icon-image {
+  width: 75px;
   height: 75px;
   vertical-align: middle;
   margin: 0 5px;
