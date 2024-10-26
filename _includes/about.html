@@ -5,44 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Expertise</title>
   <style>
+    body {
+      font-family: Arial, sans-serif; /* Ensure a readable font */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+
     .about {
       width: 90%;
       margin: 0 auto;
       max-width: 960px;
-    }
-
-    @media only screen and (min-width: 768px) { /* Replace $cut with a specific breakpoint */
-      .about {
-        width: 80%;
-      }
-    }
-
-    .tech {
-      margin: 10px;
-      flex: 1 1 30%;
-      max-width: 30%;
-      text-align: center;
-    }
-
-    .user {
-      text-align: center;
-      font-size: 60px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .user p {
-      font-size: 16px;
-      text-align: center;
-    }
-
-    @media only screen and (min-width: 768px) { /* Replace $cut with a specific breakpoint */
-      .user {
-        flex-wrap: nowrap;
-        font-size: 75px;
-      }
     }
 
     .user-details {
@@ -50,12 +23,62 @@
       margin: 5px auto;
     }
 
-    /* Style for .icon-image to match icon size */
+    .user {
+      display: flex;
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center-align items */
+      font-size: 20px; /* Base font size for mobile */
+    }
+
+    .tech {
+      margin: 10px;
+      flex: 1 1 100%; /* Allow flex items to grow and take full width on mobile */
+      text-align: center;
+    }
+
+    .tech h2 {
+      font-size: 24px; /* Headings on mobile */
+    }
+
+    .tech p {
+      font-size: 14px; /* Paragraphs on mobile */
+    }
+
     .icon-image {
       width: 75px;
       height: 75px;
       vertical-align: middle;
       margin: 0 5px;
+    }
+
+    /* Desktop Styles */
+    @media only screen and (min-width: 768px) {
+      .user {
+        flex-direction: row; /* Switch to horizontal layout on larger screens */
+        flex-wrap: wrap; /* Allow items to wrap on larger screens */
+        justify-content: space-around; /* Space out items evenly */
+        font-size: 25px; /* Increase font size for desktop */
+      }
+
+      .tech {
+        flex: 1 1 30%; /* Each tech item takes 30% of the width on desktop */
+        max-width: 30%; /* Ensure each tech section does not exceed 30% width */
+      }
+
+      .tech h2 {
+        font-size: 28px; /* Increase heading size for desktop */
+      }
+
+      .tech p {
+        font-size: 16px; /* Increase paragraph size for desktop */
+      }
+    }
+
+    /* Larger Screens */
+    @media only screen and (min-width: 1024px) {
+      .user {
+        font-size: 30px; /* Further increase font size for larger screens */
+      }
     }
   </style>
 </head>
