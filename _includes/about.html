@@ -1,27 +1,95 @@
-<div class="user-details">
-  <h1>My Expertise</h1>
-  <p>{{site.user_description}}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Expertise</title>
+  <style>
+    .about {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 960px;
+    }
+
+    @media only screen and (min-width: 768px) { /* Replace $cut with a specific breakpoint */
+      .about {
+        width: 80%;
+      }
+    }
+
+    .tech {
+      margin: 10px;
+      flex: 1 1 30%;
+      max-width: 30%;
+      text-align: center;
+    }
+
+    .user {
+      text-align: center;
+      font-size: 60px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .user p {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 768px) { /* Replace $cut with a specific breakpoint */
+      .user {
+        flex-wrap: nowrap;
+        font-size: 75px;
+      }
+    }
+
+    .user-details {
+      text-align: center;
+      margin: 5px auto;
+    }
+
+    /* Style for .icon-image to match icon size */
+    .icon-image {
+      width: 75px;
+      height: 75px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="about">
+  <div class="user-details">
+    <h1>My Expertise</h1>
+    <p>{{site.user_description}}</p>
+  </div>
+  <div class="user">
+    <div class="tech">
+      <h2>Languages</h2>
+      <i class="devicon-javascript-plain colored"></i>
+      <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+      <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+      <p>Python, Java, MySQL, C/C++, HTML, JavaScript, TypeScript, TailwindCSS, and more.</p>
+    </div>
+    <div class="tech">
+      <h2>Frameworks and Libraries</h2>
+      <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original-wordmark.svg" />
+      <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original-wordmark.svg" />
+      <i class="devicon-nodejs-plain-wordmark"></i>
+      <p>ML - Scikit Learn, CNN, LSTM, NLP, Tensorflow, Pytorch, Keras, SciPy, NumPy, and more.<br>Web - ReactJS, NodeJS, NextJS, Django</p>
+    </div>
+    <div class="tech">
+      <h2>Tools</h2>
+      <i class="devicon-git-plain"></i>
+      <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
+      <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" />
+      <p>Docker, Git, Android Studio, Visual Studio, R Studio, Jupyter Notebook, and more.</p>
+    </div>
+  </div>
 </div>
-<div class="user">
-  <div class="tech">
-    <h2>Languages</h2>
-    <i class="devicon-javascript-plain colored"></i>
-    <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
-    <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
-    <p>Python, Java, MySQL, C/C++, HTML, JavaScript, TypeScript, TailwindCSS, and more.</p>
-  </div>
-  <div class="tech">
-    <h2>Frameworks and Libraries</h2>
-    <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original-wordmark.svg" />
-    <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original-wordmark.svg" />
-    <i class="devicon-nodejs-plain-wordmark"></i>
-    <p>ML - Scikit Learn, CNN, LSTM, NLP, Tensorflow, Pytorch, Keras, SciPy, NumPy, and more.<br>Web - ReactJS, NodeJS, NextJS Django</p>
-  </div>
-  <div class="tech">
-    <h2>Tools</h2>
-    <i class="devicon-git-plain"></i>
-    <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
-    <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" />
-    <p>Docker, Git, Android Studio, Visual Studio, R Studio, Jupyter Notebook, and more</p>
-  </div>
-</div>
+
+</body>
+</html>
